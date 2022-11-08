@@ -8,13 +8,28 @@ demo1.innerHTML = myFunction(7, 4);
 
 function loadDoc() {
 	var xHttp = new XMLHttpRequest()
-	xHttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			document.getElementById('demo_3').innerHTML = this.responseText;
-		}
-	}
+	xHttp.onload = function() {
+        tableFunction(this);
+    }
 	xHttp.open('GET', 'text.xml', true);
 	xHttp.send();
-
 }
 
+function tableFunction(xml) {
+    const xmlDoc = xml.responseXML;
+    const x = getElementsByTagName('book');
+    let table = "<tr><td>Title</td><td>Author</td><td>Year</td><td>Price</td></tr>"
+
+    for (let i = 0; i < x.length; i++) {
+        table += "<tr><td>" +
+        x[i].getElementsByTagName('title').childNodes[0].nodeValue[0] +
+        "</td><td>" +
+        x[i].getElementsByTagName('author').childNodes[0].nodeValue[0] +
+        "</td><td>" +
+        x[i].getElementsByTagName('year').childNodes[0].nodeValue[0] +
+        "</td><td>" +
+        x[i].getElementsByTagName('price').childNodes[0].nodeValue[0] +
+        "</td></tr>";
+    }
+document.getElementById('demo_3').innerHTML = table;
+}

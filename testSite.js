@@ -17,7 +17,7 @@ function loadDoc() {
 
 function tableFunction(xml) {
     const xmlDoc = xml.responseXML;
-    const x = getElementsByTagName('book');
+    const x = xmlDoc.getElementsByTagName('book');
     let table = "<tr><td>Title</td><td>Author</td><td>Year</td><td>Price</td></tr>"
 
     for (let i = 0; i < x.length; i++) {

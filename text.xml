@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookstore>
+	<book category="Programming">
+		<title lang="en">Learning Javascript</title>
+		<author>Unnamed</author>
+		<year>2012</year>
+		<price>19.99</price>
+	</book>
+
+	<book category="Computing">
+		<title lang="en">Tutorial on Binary</title>
+		<author>Unnamed</author>
+		<year>2015</year>
+		<price>15.99</price>
+	</book>
+</bookstore>
+
+

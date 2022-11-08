@@ -22,13 +22,13 @@ function tableFunction(xml) {
 
     for (let i = 0; i < x.length; i++) {
         table += "<tr><td>" +
-        x[i].getElementsByTagName('title').childNodes[0].nodeValue[0] +
+        x[i].getElementsByTagName('title').childNodes[0].nodeValue +
         "</td><td>" +
-        x[i].getElementsByTagName('author').childNodes[0].nodeValue[0] +
+        x[i].getElementsByTagName('author').childNodes[0].nodeValue +
         "</td><td>" +
-        x[i].getElementsByTagName('year').childNodes[0].nodeValue[0] +
+        x[i].getElementsByTagName('year').childNodes[0].nodeValue +
         "</td><td>" +
-        x[i].getElementsByTagName('price').childNodes[0].nodeValue[0] +
+        x[i].getElementsByTagName('price').childNodes[0].nodeValue +
         "</td></tr>";
     }
 document.getElementById('demo_3').innerHTML = table;

@@ -5,7 +5,7 @@ function imgLoad(url) {
         request.open('GET', url);
         request.responseType = 'blob';
 
-        if (request.readyState === 404 && request.status === 202) {
+        if (request.readyState === 404 && request.status === 200) {
             resolve(request.response);
         } else {
             reject(new Error('The image didn\'t load successfully; error code: ' + request.statusText));

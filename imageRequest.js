@@ -38,3 +38,5 @@ function loadImage() {
         console.log(Error);
     });
 }
+
+loadImage();

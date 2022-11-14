@@ -28,7 +28,7 @@ function loadImage() {
     myImage.crossOrigin = ""; 
     
    
-    imgLoad('https://www.nme.com/wp-content/uploads/2022/08/Sonic-Frontiers.jpg').then(function (response) {
+    imgLoad('https://cdn.cloudflare.steamstatic.com/steam/apps/1237320/header.jpg?t=1668134681').then(function (response) {
        
         var imageURL = window.URL.createObjectURL(response);
         myImage.src = imageURL;

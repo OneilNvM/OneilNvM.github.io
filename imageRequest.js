@@ -24,3 +24,23 @@ function loadImg() {
 
     
 }
+
+function loadImage() {
+    'use strict';
+ 
+    var body = document.querySelector('body'),
+        myImage = new Image();
+  
+    myImage.crossOrigin = "anonymous"; 
+    
+   
+    imgLoad('https://cdn.cloudflare.steamstatic.com/steam/apps/1237320/header.jpg?t=1668134681').then(function (response) {
+       
+        var imageURL = window.URL.createObjectURL(response);
+        myImage.src = imageURL;
+        body.appendChild(myImage);
+       
+    }, function (Error) {
+        console.log(Error);
+    });
+}

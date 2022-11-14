@@ -5,16 +5,19 @@ function imgLoad(url) {
         request.open('GET', url);
         request.responseType = 'blob';
 
-        if (request.readyState === 4 && request.status === 200) {
-            resolve(request.response);
-        } else {
-            reject(new Error('The image didn\'t load successfully; error code: ' + request.statusText));
-        }
-    request.onerror = function () {
-        reject(new Error('There was a network error.'));
+        request.onload = function () {
+            if (request.readyState === 4 && request.status === 200) {
+                resolve(request.response);
+            } else {
+                reject(new Error('The image didn\'t load successfully; error code: ' + request.statusText));
+            }
+        };
+    
+        request.onerror = function () {
+            reject(new Error('There was a network error.'));
     }
 
-    request.send();
+        request.send();
     });
 
 };

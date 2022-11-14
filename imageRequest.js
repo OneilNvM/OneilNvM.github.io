@@ -19,12 +19,6 @@ function imgLoad(url) {
 
 };
 
-function loadImg() {
-    'use strict'
-
-    
-}
-
 function loadImage() {
     'use strict';
  

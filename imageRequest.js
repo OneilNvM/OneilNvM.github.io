@@ -25,7 +25,7 @@ function loadImage() {
     var body = document.querySelector('body'),
         myImage = new Image();
   
-    myImage.crossOrigin = "anonymous"; 
+    myImage.crossOrigin = ""; 
     
    
     imgLoad('https://www.nme.com/wp-content/uploads/2022/08/Sonic-Frontiers.jpg').then(function (response) {

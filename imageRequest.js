@@ -2,7 +2,7 @@ function imgLoad(url) {
     'use strict';
     return new Promise(function (resolve, reject) {
         var request = new XMLHttpRequest();
-        request.open('GET', url + Math.random());
+        request.open('GET', url);
         request.responseType = 'blob';
 
         request.onload = function () {

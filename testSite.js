@@ -11,7 +11,7 @@ function loadDoc() {
     xHttp.onload = function () {
         tableFunction(this);
     }
-    xHttp.open('GET', 'text.xml' + Math.random(), true);
+    xHttp.open('GET', 'text.xml?t=' + Math.random(), true);
     xHttp.send();
 }
 
